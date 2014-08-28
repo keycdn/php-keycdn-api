@@ -3,6 +3,10 @@ KeyCDN REST API Library
 
 PHP Library for the KeyCDN API
 
+[KeyCDN](http://www.keycdn.com) is a Content Delivery Network to accelerate your web assets.
+
+Please contact us if you got any questions or if you need more functionality: [KeyCDN Support](http://www.keycdn.com/contacts)
+
 ## Requirements 
 - PHP 5.3 or above
 - PHP Curl Extension
@@ -42,5 +46,4 @@ if ($answer['status'] == 'success') {
 ## Methods
 
 Each of the supported HTTP methods (GET, PUT, POST, DELETE) is produced by an own function in the KeyCDN lib. E.g. POST becomes ```$keycdn_api->post(...);```.
-
 
