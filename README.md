@@ -3,9 +3,9 @@ KeyCDN REST API Library
 
 PHP Library for the KeyCDN API
 
-[KeyCDN](http://www.keycdn.com) is a Content Delivery Network to accelerate your web assets.
+[KeyCDN](https://www.keycdn.com) is a Content Delivery Network to accelerate your web assets.
 
-Please contact us if you got any questions or if you need more functionality: [KeyCDN Support](http://www.keycdn.com/contacts)
+Please contact us if you got any questions or if you need more functionality: [KeyCDN Support](https://www.keycdn.com/contacts)
 
 ## Requirements 
 - PHP 5.3 or above
