@@ -1,7 +1,16 @@
 {
 	"name": "keycdn/keycdn-api",
 	"description": "PHP Library for the KeyCDN API",
-	"require": {
+	"type": "library",
+	"license": "MIT",
+	"homepage": "https://www.keycdn.com",
+	"support": {
+        	"email": "support@keycdn.com",
+        	"source": "http://www.github.com/keycdn/php-keycdn-api"
+	},	
+	"require": { 
+		"php": ">=5.3.0",
+		"ext-curl": "*"
 	},
 	"autoload": {
 		"psr-0": {
