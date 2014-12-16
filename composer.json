@@ -1,0 +1,11 @@
+{
+	"name": "keycdn/keycdn-api",
+	"description": "PHP Library for the KeyCDN API",
+	"require": {
+	},
+	"autoload": {
+		"psr-0": {
+			"": "src/"
+		}
+	}
+}
