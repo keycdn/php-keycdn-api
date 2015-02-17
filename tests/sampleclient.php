@@ -4,12 +4,12 @@
 require 'src/KeyCDN.php';
 
 // create object and pass login credentials
-$keycdn = new KeyCDN('your_username', 'your_password');
+$keycdn = new KeyCDN('your_api_key');
 
 // GET object zones
 $result = $keycdn->get('zones.json');
 
-// create zone 
+// create zone
 $result = $keycdn->post('zones.json', array(
     'name' => 'testzone',
 ));

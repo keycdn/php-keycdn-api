@@ -3,18 +3,13 @@
  * Library for the KeyCDN API
  *
  * @author Tobias Moser
- * @version 0.1
+ * @version 0.2
  */
 class KeyCDN {
 	/**
 	 * @var string
 	 */
-	private $username;
-
-	/**
-	 * @var string
-	 */
-	private $password;
+	private $apiKey;
 
 	/**
 	 * @var string
@@ -22,49 +17,31 @@ class KeyCDN {
 	private $endpoint;
 
 	/**
-	 * @param string $username
-	 * @param string $password
+	 * @param string $apiKey
 	 * @param string|null $endpoint
 	 */
-	public function __construct($username, $password, $endpoint = null) {
+	public function __construct($apiKey, $endpoint = null) {
 		if($endpoint === null) {
 			$endpoint = 'https://www.keycdn.com';
 		}
 
-		$this->setUsername($username);
-		$this->setPassword($password);
+		$this->setApiKey($apiKey);
 		$this->setEndpoint($endpoint);
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getUsername() {
-		return $this->username;
+	public function getApiKey() {
+		return $this->apiKey;
 	}
 
 	/**
-	 * @param string $username
+	 * @param string $apiKey
 	 * @return $this
 	 */
-	public function setUsername($username) {
-		$this->username = (string) $username;
-		return $this;
-	}
-
-	/**
-	 * @return string
-	 */
-	public function getPassword() {
-		return $this->password;
-	}
-
-	/**
-	 * @param string $password
-	 * @return $this
-	 */
-	public function setPassword($password) {
-		$this->password = (string) $password;
+	public function setApiKey($apiKey) {
+		$this->apiKey = (string) $apiKey;
 		return $this;
 	}
 
@@ -138,7 +115,7 @@ class KeyCDN {
 		$ch = curl_init();
 
 		// create basic auth information
-		curl_setopt($ch, CURLOPT_USERPWD, $this->username . ':' . $this->password);
+		curl_setopt($ch, CURLOPT_USERPWD, $this->apiKey . ':');
 
 		// return transfer as string
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

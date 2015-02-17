@@ -7,7 +7,7 @@ PHP Library for the KeyCDN API
 
 Please contact us if you got any questions or if you need more functionality: [KeyCDN Support](https://www.keycdn.com/contacts)
 
-## Requirements 
+## Requirements
 - PHP 5.3 or above
 - PHP Curl Extension
 
@@ -18,7 +18,7 @@ Please contact us if you got any questions or if you need more functionality: [K
 require 'path_to_repo/src/KeyCDN.php';
 
 // create the REST object
-$keycdn_api = new KeyCDN($myUsername, $myPassword);
+$keycdn_api = new KeyCDN('your_api_key');
 
 // get zone information
 $keycdn_api->get('zones.json');
@@ -46,4 +46,3 @@ if ($answer['status'] == 'success') {
 ## Methods
 
 Each of the supported HTTP methods (GET, PUT, POST, DELETE) is produced by an own function in the KeyCDN lib. E.g. POST becomes ```$keycdn_api->post(...);```.
-
