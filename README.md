@@ -49,8 +49,7 @@ $result = $keycdn_api->get('reports/traffic.json', array(
 $answer = json_decode($result, true);
 
 // since we get results pr day, we need to sum them
-if ($answer['status'] == 'success')
-{
+if ($answer['status'] == 'success') {
     $amount = 0;
     foreach ($answer['data']['stats'] as $stats) {
         $amount += $stats['amount'];
@@ -60,9 +59,6 @@ if ($answer['status'] == 'success')
 } else {
     echo 'Something went wrong...'
 }
-
-
-
 
 ...
 
