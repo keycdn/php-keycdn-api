@@ -38,6 +38,32 @@ if ($answer['status'] == 'success') {
 }
 
 
+// get traffic stats for the last 30 days
+$result = $keycdn_api->get('reports/traffic.json', array(
+    'zone_id' => 123,
+    'start'   => Carbon::now('UTC')->subDays(30)->timestamp,
+    'end'     => Carbon::now('UTC')->timestamp
+));
+
+// convert json-answer into an array
+$answer = json_decode($result, true);
+
+// since we get results pr day, we need to sum them
+if ($answer['status'] == 'success')
+{
+    $amount = 0;
+    foreach ($answer['data']['stats'] as $stats) {
+        $amount += $stats['amount'];
+    }
+    
+    echo 'Traffic last 30 days: ' . $amount;
+} else {
+    echo 'Something went wrong...'
+}
+
+
+
+
 ...
 
 ?>
