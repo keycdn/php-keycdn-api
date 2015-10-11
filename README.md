@@ -36,8 +36,12 @@ $answer = json_decode($result, true);
 if ($answer['status'] == 'success') {
     echo 'Zonename successfully changed...';
 }
+```
 
 
+### get traffic stats
+
+```php
 // get traffic stats for the last 30 days
 $result = $keycdn_api->get('reports/traffic.json', array(
     'zone_id' => 123,
@@ -54,16 +58,23 @@ if ($answer['status'] == 'success') {
     foreach ($answer['data']['stats'] as $stats) {
         $amount += $stats['amount'];
     }
-    
+
     echo 'Traffic last 30 days: ' . $amount;
 } else {
     echo 'Something went wrong...'
 }
 
-...
-
-?>
 ```
+
+
+### single or bulk url purge
+
+```php
+$result = $keycdn->delete('zones/purgeurl/{zone_id}.json', array(
+    'urls' => array('foo-1.kxcdn.com/bar1.jpg','foo-1.kxcdn.com/bar2.jpg'),
+));
+```
+
 
 ## Methods
 
