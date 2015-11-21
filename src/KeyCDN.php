@@ -2,8 +2,8 @@
 /**
  * Library for the KeyCDN API
  *
- * @author Tobias Moser
- * @version 0.2
+ * @author Sven Baumgartner
+ * @version 0.3
  */
 class KeyCDN {
 	/**
@@ -22,7 +22,7 @@ class KeyCDN {
 	 */
 	public function __construct($apiKey, $endpoint = null) {
 		if($endpoint === null) {
-			$endpoint = 'https://www.keycdn.com';
+			$endpoint = 'https://api.keycdn.com';
 		}
 
 		$this->setApiKey($apiKey);
