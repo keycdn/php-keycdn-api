@@ -2,7 +2,7 @@
 /**
  * Library for the KeyCDN API
  *
- * @author Sven Baumgartner
+ * @author KeyCDN
  * @version 0.3
  */
 class KeyCDN {
